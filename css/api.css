@@ -1,0 +1,136 @@
+:root {
+    /* Sizes */
+    font-size: 12px;
+    --container-width: 1350px;
+
+    /* Colors */
+    --primary-color: #0e00d1;
+    --secondary-color: #00eaff;
+
+    /* Transistion */
+    --transition-duration: .5s;
+    --transition-function: ease;
+}
+
+/* NORMALIZER */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* Container */
+.title{
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.button-form{
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: var(--secondary-color);
+    transition: background var(--transition-duration) var(--transition-function);
+    border-radius: .5rem;
+}
+
+.animeForm{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.id-form{
+    width: 100%;
+    border: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    transition: background var(--transition-duration), color var(--transition-duration);
+    transition-timing-function: var(--transition-function);
+    color: #fff;
+}
+
+
+.animeDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.animeDiv > ul {
+    margin-top: 1rem;
+}
+
+.animeDiv > ul > li:nth-child(2), .animeDiv > ul > li:nth-child(3) {
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 520px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row: repeat(2,1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    .animeDiv{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .animeDiv{
+        width: 60%;
+    }
+    .animeForm{
+        width: 40%;
+    }
+}
