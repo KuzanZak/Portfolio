@@ -4,17 +4,18 @@
     --container-width: 1350px;
 
     /* Colors */
-    --primary-color: #0e00d1;
-    --secondary-color: #00eaff;
-    --main-bg: rgb(1, 45, 89);
+    --primary-color: rgb(230, 230, 230);
+    --secondary-color:  rgb(250, 250, 245);
+    --third-color : rgb(255, 111, 97);
+    --main-bg: rgb(22, 102, 148);
     --dark-grey: #313335;
     --dark-grey-transparent: rgba(49, 51, 53, 0.7);
-    --light-grey: #EEE9E9;
+    --light-white: #EEE9E9;
 
     /* Special colors */
-    --transparent-white: rgba(255, 255, 255, 0.5);
-    --transparent-black: rgba(0, 0, 0, .5);
-    --transparent-blue75: rgba(1, 45, 89, .75);
+    --transparent-orange: rgba(255, 111, 97, 0.5);
+    --transparent-blue: rgba(22, 102, 148, .5);
+    --transparent-blue75: rgba(119, 120, 120, 0.75);
 
     /* Social colors */
     --twitter-color: #55acee;   
@@ -88,8 +89,8 @@ body.template-dark {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--transparent-black);
-    border-bottom: 1px solid var(--transparent-white);
+    background-color: var(--transparent-blue);
+    border-bottom: 1px solid var(--transparent-orange);
     z-index: 100;
 }
 
@@ -122,7 +123,7 @@ body.template-dark {
         left: 0; 
         width: 100%;
         text-align: center;
-        background-color: var(--transparent-blue75);
+        background-color: var(--transparent-blue);
         height: 100vh;
         transition: top var(--transition-duration) var(--transition-function);
     }
@@ -132,7 +133,7 @@ body.template-dark {
     }
 
     .nav-item{
-        border-bottom: 1px solid var(--transparent-white);
+        border-bottom: 1px solid var(--transparent-orange);
     }
 
     .nav-link{
@@ -148,6 +149,8 @@ body.template-dark {
         align-items: center;
         justify-content: center;
         gap: 3rem;
+        padding: .5rem 0;
+        /* font-weight: bold; */
     }
 
     .nav-link{
@@ -165,7 +168,7 @@ body.template-dark {
         position: absolute;
         left: 0;
         bottom: -.5rem;
-        background-color: var(--secondary-color);
+        background-color: var(--third-color);
         transition: width .3s ease;
     }
 
@@ -214,11 +217,11 @@ body.template-dark {
 
 .button-scroll{
     display: block;
-    background-color: var(--secondary-color);
+    background-color: var(--third-color);
     width: 5rem;
     height: 5rem;
     border-radius: 5rem; 
-    color: #fff;
+    color: var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -231,7 +234,6 @@ body.template-dark {
 
 .button-scroll:hover{
     transform:  scale(1.5);
-    background-color: var(--primary-color);
 }
 
 /* ABOUT SECTION */ 
@@ -279,7 +281,7 @@ body.template-dark {
 .title-top {
     font-size: 1.5rem;
     text-transform: uppercase;
-    color: var(--secondary-color);
+    color: var(--third-color);
 }
 
 .title-main {
@@ -399,15 +401,14 @@ body.template-dark {
     border: none;
     font-size: 1.5rem;
     padding: 1rem;
-    background-color: var(--dark-grey);
+    background-color: var(--secondary-color);
     transition: background var(--transition-duration), color var(--transition-duration);
     transition-timing-function: var(--transition-function);
-    color: #fff;
 }
 
 .contact-text:focus{
-    background-color: var(--light-grey);
-    color: #000;
+    background-color: var(--third-color);
+    color: var(--secondary-color);
 }
 
 .contact-consent{
@@ -428,15 +429,16 @@ body.template-dark {
     padding: 1rem 2rem;
     border: none;
     font-size: 1.5rem;
-    color: #fff;
-    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: var(--third-color);
     transition: background var(--transition-duration) var(--transition-function);
     border-radius: .5rem;
 }
 
 .button:hover{
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     cursor: pointer;
+    color: var(--third-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -465,15 +467,12 @@ body.template-dark {
     justify-content: space-between;
     gap: 2rem;
     padding: 2rem;
-    border-top: 1px solid var(--transparent-white);
+    border-top: 1px solid var(--transparent-orange);
 }
 
 @media screen and (min-width: 768px) {
-
     .footer {
-
         padding: 1rem 2rem;
-
     }
 }
 

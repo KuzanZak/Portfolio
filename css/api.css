@@ -4,12 +4,11 @@
     --container-width: 1350px;
 
     /* Colors */
-    --primary-color: #0e00d1;
-    --secondary-color: #00eaff;
-
-    /* Transistion */
-    --transition-duration: .5s;
-    --transition-function: ease;
+    --primary-color: #920101;
+    --primary-color: rgb(230, 230, 230);
+    --secondary-color:  rgb(250, 250, 245);
+    --primary-color : rgb(255, 111, 97);
+    --main-bg: rgb(22, 102, 148);
 }
 
 /* NORMALIZER */
@@ -52,8 +51,8 @@ textarea:focus,
 button:focus {
     outline: none;
 }
-
-/* Container */
+/* BODY*/
+/* CONTAINER */
 .title{
     text-align: center;
     text-decoration: underline;
@@ -64,17 +63,16 @@ button:focus {
     margin: 1rem 0 2rem 0;
 }
 
+/* ANIME FORM */
 .button-form{
-    padding: 1rem 2rem;
-    border: none;
     font-size: 1.5rem;
-    color: #fff;
-    background-color: var(--secondary-color);
-    transition: background var(--transition-duration) var(--transition-function);
     border-radius: .5rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
-.animeForm{
+.anime-form{
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -82,19 +80,17 @@ button:focus {
     gap: 1rem;
 }
 
-.id-form{
+.form-id{
     width: 100%;
     border: none;
     font-size: 1.5rem;
     padding: 1rem;
-    background-color: var(--secondary-color);
-    transition: background var(--transition-duration), color var(--transition-duration);
-    transition-timing-function: var(--transition-function);
+    background-color: var(--primary-color);
     color: #fff;
 }
 
 
-.animeDiv{
+.anime-datas{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,11 +100,9 @@ button:focus {
     margin: 0 auto;
 }
 
-.animeDiv > ul {
-    margin-top: 1rem;
-}
-
-.animeDiv > ul > li:nth-child(2), .animeDiv > ul > li:nth-child(3) {
+.anime-datas > ul, 
+.anime-datas > ul > li:nth-child(2), 
+.anime-datas > ul > li:nth-child(3) {
     margin-top: 1rem;
 }
 
@@ -120,17 +114,14 @@ button:focus {
         justify-content: center;
         align-items: center;
     }
-    .animeDiv{
-        margin: 0;
-        padding: 0;
+
+    .anime-datas{
+        padding: 1rem 0;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .animeDiv{
-        width: 60%;
-    }
-    .animeForm{
-        width: 40%;
+    .anime-form{
+        width: 50%;
     }
 }

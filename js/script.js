@@ -35,3 +35,20 @@ mainNav.addEventListener("click", function(event){
 window.addEventListener("resize", function(){
     if(window.innerWidth >= 768) resetNav();
 })
+
+// Save form data to LocalStorage
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+
+    // Store the form data in LocalStorage as a stringified JSON object
+    localStorage.setItem('contact-infos', JSON.stringify({ name, phone, email, message }));
+    alert("Données sauvegardées");
+});
+
+// Retrieve data from LocalStorage
+const savedData = JSON.parse(localStorage.getItem('contact-infos'));
+console.log(savedData);
